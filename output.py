@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 df = pd.read_csv("qca_predictions_insample.csv")
 
@@ -11,3 +12,5 @@ plt.plot([df.y_true.min(), df.y_true.max()],
          [df.y_true.min(), df.y_true.max()], 'r--')
 plt.show()
 
+# mse = np.mean((df["y_true"]-df["y_pred"])**2)
+# print(mse)
